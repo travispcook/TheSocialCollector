@@ -1,0 +1,32 @@
+<html>
+<head>
+
+<script src='/lib/jquery.js' type='text/javascript'></script>
+<!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"> -->
+<script src='http://code.angularjs.org/1.1.5/angular.js' type='text/javascript'></script>
+<script type='text/javascript' src='/../../controller.js'></script>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+<script type="text/javascript">
+    if (window.location.hash && window.location.hash == '#_=_') {
+        if (window.history && history.pushState) {
+            window.history.pushState("", document.title, window.location.pathname);
+        } else {
+            // Prevent scrolling by storing the page's current scroll offset
+            var scroll = {
+                top: document.body.scrollTop,
+                left: document.body.scrollLeft
+            };
+            window.location.hash = '';
+            // Restore the scroll offset, should be flicker free
+            document.body.scrollTop = scroll.top;
+            document.body.scrollLeft = scroll.left;
+        }
+    }
+</script>
+
+<title>The Social Collector</title>
+</head>
+
+<body ng-app='FBApp'>
+  

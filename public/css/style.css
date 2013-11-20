@@ -1,0 +1,170 @@
+body, html, h1, h2, h3, h4, h5, h6, ul{
+	padding: 0px;
+	margin: 0px;
+	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+	background-color: whitesmoke;
+}
+
+h1{
+	text-align: center;
+	padding: 20px 0px;
+	background-color: cornflowerblue;
+	color: white;
+}
+
+
+h1 strong {
+	letter-spacing: -1px;
+}
+
+
+input, select, form, ul {
+	margin-bottom: 10px;
+}
+
+.searchForm{
+	width: 500px;
+	margin:auto;
+	text-align: center;
+}
+
+.form-inline{
+	margin-bottom: 10px;
+}
+
+
+.feedbox{
+	border:1px dashed gray;
+}
+
+
+.facebookfeed{
+	list-style-type: none;
+	float:left;
+	width:32%;
+	border:2px solid #3b5998;
+	margin-left: 8px;
+}
+
+.facebookhead{
+	width: 100%;
+	height: 80px;
+	background-color: #3b5998;
+	text-align: center;
+	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+	font-size: 25px;
+	padding-top: 7px;
+	display: block;
+}
+
+.facebookhead h3{
+	background-color: #3b5998;
+	color: white;
+	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+	margin-bottom: 5px;
+}
+
+.fblogin{
+	text-decoration: none;
+	font-size: 10px;
+	display: block;
+	float: left;
+	text-align: center;
+	padding-left: 5px;
+}
+
+.fblogin section{
+	text-decoration: none;
+	color:white;
+}
+
+.fblogout{
+	background-color: lightgrey;
+	border-radius: 8px;
+	border: 1px solid darkgray;
+	height: 27px;
+	width: 70px;
+	font-size: 12px;
+	text-align: center;
+	padding-top: 4px;
+	display: inline-block;
+}
+
+.fblogout a{
+	text-decoration: none;
+	color:black;
+	font-weight: bold;
+}
+
+#twitterhead{
+	background-image: url(https://abs.twimg.com/images/themes/theme1/bg.png);
+	background-position: left 40px;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height: 80px;
+	width:100%;
+	background-color: #C0DEED;
+	text-align: center;
+	font-family: "gazebo-bold-font","HelveticaNeue","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	font-size: 25px;
+	padding-top: 7px;
+}
+
+#googlehead{
+	height: 80px;
+	width:100%;
+	display: block;
+	text-align: center;
+	background-color:white;
+	padding-top: 5px
+}
+
+#googlehead img{
+	height: 47px;
+	width:50%;
+}
+
+
+.twitterfeed{
+	list-style-type: none;
+	float:left;
+	width:32%;
+	border:2px solid #C0DEED;
+	margin-left: 8px;
+}
+.googlefeed{
+	list-style-type: none;
+	float:left;
+	width:32%;
+	border:2px solid maroon;
+	margin-left: 8px;
+}
+
+.feedbox li {
+	font-size: 14px;
+}
+.feedbox li div{
+	margin-bottom: 7px;
+}
+
+.profile-pic {
+	float: left;
+	padding-right: 13px;
+}
+
+.post{
+	text-align: left;
+	border: 1px solid #ccc;
+	padding: 15px;
+	margin: 2px 0px;
+}
+
+.post h3 {
+	font-weight: 500;
+}
+
+ul{
+	width: auto;
+	margin: 4px;
+	margin-top: 10px;
+}

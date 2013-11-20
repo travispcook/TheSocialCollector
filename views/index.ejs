@@ -1,0 +1,67 @@
+<%= include head.ejs %>
+
+<h1>The <strong>Social</strong> Collector</h1>
+
+<div class="feedbox" ng-controller='FBController'>
+    
+    <form class="form-inline searchForm" role="form">
+      <div class="form-group">
+       <input class="form-control" placeholder="Search here" />
+        <select class="input-medium">
+            <option value=''>Name</option>
+            <option value=''>City</option>
+            <option value=''>State</option>
+            <option value=''>Country</option>
+        </select>
+        <select class="input-medium">
+            <option value="true">Descending</option>
+            <option value="false">Ascending</option>
+        </select>
+      </div>
+  </form>
+    <div class='facebookfeed'>
+     <div class='facebookhead'>
+      <h3>Facebook Feed</h3>
+        <div class='fblogin'>
+          <a href="/auth/facebook"><img src="img/login-with-facebook.png" width="154" height="22">
+            <section><%= user ? user._json.name+' logged in' : 'not logged in' %></section>
+          </a>
+        </div>
+        <div class='fblogout'>
+          <a href="/logout">
+            LOGOUT
+          </a>
+        </div>
+     </div>
+      <ul>
+       <li class='post' ng-repeat='FBpost in feedItems | filter:search | orderBy:dropFilter:sortOrder'>
+         <div ng-if="FBpost.data.from.name!null" class="posted_by">{{FBpost.data.from.name}}
+         </div>
+         <div ng-if="FBpost.data.message!null" class="message">{{FBpost.data.message}}
+         </div>
+
+       </li>
+      </ul> 
+    </div>
+    
+    <div class='twitterfeed'>
+     <div id='twitterhead'>Twitter Feed</div>
+      <a class="twitter-timeline" href="https://twitter.com/TravisPCook" data-widget-id="402523573492805632">Tweets by @TravisPCook</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+
+    <div class='googlefeed'>
+     <div id='googlehead'><img src='/img/googleplus.jpg'/></div>
+      <ul>
+       <li class='post'>
+         <img class="profile-pic"/>
+        <h3>Name</h3>
+        <div> message
+         </div>
+       </li>
+      </ul>
+    </div>
+
+</div>
+</body>
+</html>
