@@ -8,6 +8,7 @@
     "passport": ">= 0.0.0",
     "passport-facebook": ">= 0.0.0",
     "fb": ">= 0.0.0",
-    "request": "*"
+    "request": "*",
+    "passport-google": ">= 0.0.0"
   }
 }

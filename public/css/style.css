@@ -30,12 +30,11 @@ input, select, form, ul {
 
 .form-inline{
 	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 
-.feedbox{
-	border:1px dashed gray;
-}
+
 
 
 .facebookfeed{
@@ -95,7 +94,14 @@ input, select, form, ul {
 	color:black;
 	font-weight: bold;
 }
+.comments{
+	
+	display:inline-block;
+}
 
+.comment_message{
+	font-size: 12px;
+}
 #twitterhead{
 	background-image: url(https://abs.twimg.com/images/themes/theme1/bg.png);
 	background-position: left 40px;
@@ -109,7 +115,25 @@ input, select, form, ul {
 	font-size: 25px;
 	padding-top: 7px;
 }
+.twitterfeed{
+	list-style-type: none;
+	float:left;
+	width:32%;
+	border:2px solid #C0DEED;
+	margin-left: 8px;
+}
 
+.twitter-timeline{
+	text-align: center;
+
+}
+.googlefeed{
+	list-style-type: none;
+	float:left;
+	width:32%;
+	border:2px solid maroon;
+	margin-left: 8px;
+}
 #googlehead{
 	height: 80px;
 	width:100%;
@@ -125,19 +149,12 @@ input, select, form, ul {
 }
 
 
-.twitterfeed{
-	list-style-type: none;
-	float:left;
-	width:32%;
-	border:2px solid #C0DEED;
-	margin-left: 8px;
-}
-.googlefeed{
-	list-style-type: none;
-	float:left;
-	width:32%;
-	border:2px solid maroon;
-	margin-left: 8px;
+
+
+
+.filler{
+	width: 100%;
+	text-align: center;
 }
 
 .feedbox li {

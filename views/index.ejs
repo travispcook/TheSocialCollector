@@ -34,32 +34,58 @@
         </div>
      </div>
       <ul>
-       <li class='post' ng-repeat='FBpost in feedItems | filter:search | orderBy:dropFilter:sortOrder'>
-         <div ng-if="FBpost.data.from.name!null" class="posted_by">{{FBpost.data.from.name}}
+       <li class='post' ng-repeat='FBpost in FBfeed | filter:search | orderBy:dropFilter:sortOrder'>
+         
+         <h3 ng-if="FBpost.from.name!=null" class="posted_by">{{FBpost.from.name}}
+         </h3>
+         <img ng-if="FBpost.picture!=null" class="picture" ng-src="{{FBpost.picture}}"/>
+         <img ng-if="FBpost.icon!=null" class="picture" ng-src="{{FBpost.icon}}"/>
+         <a ng-if="FBpost.link!=null" class="link" ng-href="{{FBpost.link}}">{{FBpost.name}}
+         </a>
+         <div ng-if="FBpost.story!=null" class="message">{{FBpost.story}}
          </div>
-         <div ng-if="FBpost.data.message!null" class="message">{{FBpost.data.message}}
+         <div ng-if="FBpost.message!=null" class="message">{{FBpost.message}}
          </div>
+          
+          <ul>
+            <li class="comments" ng-repeat='Comments in FBpost.comments.data'>
+              <h4 ng-if='Comments.from.name!=null' class='commenter'>{{Comments.from.name}}
+              </h4>
+              <div ng-if='Comments.message!=null' class='comment_message'>{{Comments.message}}
+              </div>
+            </li>
+
 
        </li>
       </ul> 
     </div>
-    
+    <!-- temporary use widget for Twitter feed, will impliment passport-twitter to get Oauth -->
     <div class='twitterfeed'>
      <div id='twitterhead'>Twitter Feed</div>
-      <a class="twitter-timeline" href="https://twitter.com/TravisPCook" data-widget-id="402523573492805632">Tweets by @TravisPCook</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <a class="twitter-timeline" href="https://twitter.com/TravisPCook/mylist" data-widget-id="403108950297427971">Tweets from https://twitter.com/TravisPCook/mylist</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+        </script>
     </div>
 
     <div class='googlefeed'>
-     <div id='googlehead'><img src='/img/googleplus.jpg'/></div>
-      <ul>
-       <li class='post'>
-         <img class="profile-pic"/>
-        <h3>Name</h3>
-        <div> message
+     <div id='googlehead'><img src='/img/googleplus.jpg'/>
+        <!-- Issues with OAuth conflict with FB  IMG as placeholder for visibility sake-->
+        <!-- <a href="/auth/google">Sign On with Google</a>
+        <% if (!user) { %>
+        <h2>Welcome! Please log in.</h2>
+        <% } else { %>
+                <h2>Hello, <%= user.identifier %>.</h2>
+        <% } %> -->
+     </div>
+      <!-- <ul>
+       <li class='post'> -->
+         <img src='/img/ScreenShot.png'class='filler'/>
+         <img src='/img/ScreenShot2.png'class='filler'/>
+        <!-- h3>Travis Cook</h3>
+        <div> Late night coding at DevMountain! HACK-A-THON!!
          </div>
        </li>
-      </ul>
+      </ul> -->
     </div>
 
 </div>
